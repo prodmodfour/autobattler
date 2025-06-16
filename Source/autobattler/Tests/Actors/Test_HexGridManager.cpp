@@ -17,7 +17,7 @@ UWorld* GetTestWorld()
 }
 #endif 
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FHexGridManagerInitializationTest, "MyTFTProject.Actors.HexGridManager.Initialization", EAutomationTestFlags::ApplicationContextMask | EAutomationTestFlags::SmokeFilter)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FHexGridManagerInitializationTest, "autobattler.Actors.HexGridManager.Initialization", EAutomationTestFlags::ApplicationContextMask | EAutomationTestFlags::SmokeFilter)
 
 bool FHexGridManagerInitializationTest::RunTest(const FString& Parameters)
 {
@@ -46,7 +46,7 @@ bool FHexGridManagerInitializationTest::RunTest(const FString& Parameters)
     return true;
 }
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FHexGridManagerBoundsTest, "MyTFTProject.Actors.HexGridManager.BoundsChecking", EAutomationTestFlags::ApplicationContextMask | EAutomationTestFlags::SmokeFilter)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FHexGridManagerBoundsTest, "autobattler.Actors.HexGridManager.BoundsChecking", EAutomationTestFlags::ApplicationContextMask | EAutomationTestFlags::SmokeFilter)
 
 bool FHexGridManagerBoundsTest::RunTest(const FString& Parameters)
 {
@@ -62,7 +62,7 @@ bool FHexGridManagerBoundsTest::RunTest(const FString& Parameters)
     return true;
 }
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FHexGridManagerSetUnitOnTileTest, "MyTFTProject.Actors.HexGridManager.SetUnitOnTile", EAutomationTestFlags::ApplicationContextMask | EAutomationTestFlags::SmokeFilter)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FHexGridManagerSetUnitOnTileTest, "autobattler.Actors.HexGridManager.SetUnitOnTile", EAutomationTestFlags::ApplicationContextMask | EAutomationTestFlags::SmokeFilter)
 
 bool FHexGridManagerSetUnitOnTileTest::RunTest(const FString& Parameters)
 {

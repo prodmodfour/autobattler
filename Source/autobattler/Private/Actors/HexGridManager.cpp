@@ -1,3 +1,4 @@
+#include "autobattler.h"
 #include "Actors/HexGridManager.h"
 
 AHexGridManager::AHexGridManager()

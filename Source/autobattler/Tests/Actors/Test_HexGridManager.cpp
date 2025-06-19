@@ -1,4 +1,3 @@
-#include "autobattler.h"
 #include "Misc/AutomationTest.h"
 #include "Actors/HexGridManager.h" 
 #include "Units/UnitCharacter.h"

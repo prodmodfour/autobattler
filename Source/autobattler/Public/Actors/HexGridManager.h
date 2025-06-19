@@ -3,6 +3,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "Data/HexGridDataTypes.h" 
+#include "Units/UnitCharacter.h"
 #include "HexGridManager.generated.h"
 
 UCLASS()
@@ -18,7 +19,6 @@ public:
     UFUNCTION(BlueprintCallable, Category = "Grid Management")
     void InitializeGrid(int32 Width, int32 Height);
 
-    UFUNCTION(BlueprintCallable, Category = "Grid Management")
     FHexTileData* GetTileData(const FIntPoint& GridCoordinates); 
 
     UFUNCTION(BlueprintCallable, Category = "Grid Management")

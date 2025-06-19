@@ -4,11 +4,8 @@
 	"Category": "",
 	"Description": "",
 	"Modules": [
-		{
-			"Name": "autobattler",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		}
+	{ "Name": "autobattler",      "Type": "Runtime", "LoadingPhase": "Default" },
+	{ "Name": "autobattlerTests", "Type": "Editor",  "LoadingPhase": "Default" }
 	],
 	"Plugins": [
 		{

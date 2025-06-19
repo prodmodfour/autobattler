@@ -1,6 +1,6 @@
 #include "Misc/AutomationTest.h"
 #include "Actors/HexGridManager.h" 
-#include "UnitCharacter.h"
+#include "Units/UnitCharacter.h"
 
 // A simple way to get a test world for spawning actors if needed
 #if WITH_AUTOMATION_TESTS

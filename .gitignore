@@ -36,4 +36,4 @@
 # Other                         #
 #################################
 # For personal use notes that are not needed to be tracked by git
-.snote 
+*.snote 

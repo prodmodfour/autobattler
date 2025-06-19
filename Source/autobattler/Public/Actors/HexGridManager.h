@@ -7,7 +7,7 @@
 #include "HexGridManager.generated.h"
 
 UCLASS()
-class autobattler_API AHexGridManager : public AActor
+class AUTOBATTLER_API AHexGridManager : public AActor
 {
     GENERATED_BODY()
 

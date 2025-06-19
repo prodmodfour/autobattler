@@ -1,3 +1,5 @@
+#if WITH_AUTOMATION_TESTS
+#include "CoreMinimal.h"
 #include "Misc/AutomationTest.h"
 #include "Actors/HexGridManager.h" 
 #include "Units/UnitCharacter.h"
@@ -114,3 +116,4 @@ bool FHexGridManagerSetUnitOnTileTest::RunTest(const FString& Parameters)
 
     return true;
 }
+#endif 

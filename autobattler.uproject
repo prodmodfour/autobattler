@@ -7,7 +7,20 @@
 	{ "Name": "autobattler",      "Type": "Runtime", "LoadingPhase": "Default" },
 	{ "Name": "autobattlerTests", "Type": "Editor",  "LoadingPhase": "Default" }
 	],
+	
 	"Plugins": [
+		{ 
+			"Name": "GameplayAbilities", 
+			"Enabled": true 
+		},
+		{ 
+			"Name": "GameplayTags", 
+			"Enabled": true 
+		},
+		{ 
+			"Name": "GameplayTasks", 
+			"Enabled": true 
+		},
 		{
 			"Name": "ModelingToolsEditorMode",
 			"Enabled": true

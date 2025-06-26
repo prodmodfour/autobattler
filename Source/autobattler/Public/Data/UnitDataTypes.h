@@ -6,6 +6,7 @@
 
 class UGameplayAbility;
 class UGameplayEffect;
+class UTexture2D;
 
 /**
  * @brief Enum to define the different possible unit traits for synergies.
@@ -97,6 +98,9 @@ struct FUnitData : public FTableRowBase
 	// The ability this unit can cast
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Unit Ability")
 	TSubclassOf<UGameplayAbility> UnitAbility;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Unit Data")
+    TObjectPtr<UTexture2D> PortraitTexture = nullptr;
 };
 
 /**

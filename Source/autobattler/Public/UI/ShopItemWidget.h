@@ -2,7 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
-#include "Data/UnitDataTypes.h" /
+#include "Data/UnitDataTypes.h" 
 #include "ShopItemWidget.generated.h"
 
 class UImage;

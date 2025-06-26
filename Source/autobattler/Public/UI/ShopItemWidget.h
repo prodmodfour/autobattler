@@ -17,7 +17,7 @@ class AUTOBATTLER_API UShopItemWidget : public UUserWidget
 public:
 
     UFUNCTION(BlueprintCallable, Category = "Shop Item")
-    void Initialize(const FUnitData& UnitData);
+    void Setup(const FUnitData& UnitData);
 
 protected:
 

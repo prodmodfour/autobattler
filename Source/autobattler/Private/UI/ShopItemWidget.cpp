@@ -2,7 +2,7 @@
 #include "Components/Image.h"
 #include "Components/TextBlock.h"
 
-void UShopItemWidget::Initialize(const FUnitData& UnitData)
+void UShopItemWidget::Setup(const FUnitData& UnitData)
 {
     if (Text_UnitName)
     {

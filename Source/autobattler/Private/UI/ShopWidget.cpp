@@ -71,7 +71,7 @@ void UShopWidget::RefreshShop()
             UShopItemWidget* ItemWidget = CreateWidget<UShopItemWidget>(this, ShopItemWidgetClass);
             if (ItemWidget)
             {
-                ItemWidget->Initialize(*UnitData);
+                ItemWidget->Setup(*UnitData);
                 HorizontalBox_ShopItems->AddChildToHorizontalBox(ItemWidget);
             }
         }

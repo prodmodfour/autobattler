@@ -41,11 +41,8 @@ void UShopWidget::RefreshShop()
         FUnitData* Row = UnitDataTable->FindRow<FUnitData>(RowName, ContextString);
         if (Row)
         {
-            // For now, we add all units. Later, you'll filter by PlayerLevel.
-            // if (Row->UnitTier <= PlayerLevel)
-            // {
-                 AvailableUnits.Add(Row);
-            // }
+            AvailableUnits.Add(Row);
+
         }
     }
     

@@ -75,7 +75,6 @@ struct FUnitData : public FTableRowBase
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Unit Data")
 	int32 Cost;
 
-	// The Blueprint class of the character to spawn
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Unit Data")
 	TSubclassOf<ACharacter> UnitCharacterClass;
 	

@@ -24,14 +24,14 @@ struct FTraitLevel
 	GENERATED_BODY()
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Trait")
-	int32 RequiredUnitCount;
+	int32 RequiredUnitCount = 0;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Trait")
 	FText Description;
 
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Trait")
-	TSubclassOf<UGameplayEffect> TraitEffect;
+	TSubclassOf<UGameplayEffect> TraitEffect = nullptr;
 };
 
 USTRUCT(BlueprintType)
@@ -40,7 +40,7 @@ struct FTraitData : public FTableRowBase
 	GENERATED_BODY()
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Trait")
-	EUnitTrait TraitID;
+	EUnitTrait TraitID = EUnitTrait::Warrior; // Safe default
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Trait")
 	FText DisplayName;
@@ -59,22 +59,22 @@ struct FUnitData : public FTableRowBase
 	FText DisplayName;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Unit Data")
-	int32 Cost;
+	int32 Cost = 0;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Unit Data")
 	TSubclassOf<ACharacter> UnitCharacterClass;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Unit Stats")
-	int32 MaxHealth;
+	int32 MaxHealth = 100;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Unit Stats")
-	int32 MaxMana;
+	int32 MaxMana = 100;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Unit Stats")
-	int32 AttackDamage;
+	int32 AttackDamage = 10;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Unit Stats")
-	float AttackSpeed;
+	float AttackSpeed = 1.0f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Unit Traits")
 	TArray<EUnitTrait> Traits;

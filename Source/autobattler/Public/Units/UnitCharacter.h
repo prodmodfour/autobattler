@@ -7,6 +7,7 @@
 /**
  * @class AUnitCharacter
  * @brief Represents a single unit character in the game world.
+ * @ingroup Units
  */
 UCLASS()
 class AUTOBATTLER_API AUnitCharacter : public AActor

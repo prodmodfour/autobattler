@@ -9,6 +9,7 @@
 /**
  * @class AHexGridManager
  * @brief Manages the hex grid for the game, including tile data and unit placement.
+ * @ingroup Actors
  */
 UCLASS()
 class AUTOBATTLER_API AHexGridManager : public AActor

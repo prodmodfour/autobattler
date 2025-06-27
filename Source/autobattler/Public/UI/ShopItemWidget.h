@@ -12,6 +12,7 @@ class UButton;
 /**
  * @class UShopItemWidget
  * @brief Represents a single item in the shop UI.
+ * @ingroup UI
  */
 UCLASS()
 class AUTOBATTLER_API UShopItemWidget : public UUserWidget

@@ -9,6 +9,7 @@ class AUnitCharacter;
 /**
  * @struct FHexTileData
  * @brief Represents the data for a single tile on the hex grid.
+ * @ingroup Data
  */
 USTRUCT(BlueprintType) 
 struct FHexTileData

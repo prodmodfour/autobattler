@@ -11,6 +11,7 @@ class UTexture2D;
 /**
  * @enum EUnitTrait
  * @brief Defines the possible traits a unit can have.
+ * @ingroup Data
  */
 UENUM(BlueprintType)
 enum class EUnitTrait : uint8
@@ -25,6 +26,7 @@ enum class EUnitTrait : uint8
 /**
  * @struct FTraitLevel
  * @brief Represents a single level of a trait, including the required unit count and the effect it provides.
+ * @ingroup Data
  */
 USTRUCT(BlueprintType)
 struct FTraitLevel
@@ -48,6 +50,7 @@ struct FTraitLevel
 /**
  * @struct FTraitData
  * @brief Represents the data for a single trait, including its ID, display name, and levels.
+ * @ingroup Data
  */
 USTRUCT(BlueprintType)
 struct FTraitData : public FTableRowBase
@@ -71,6 +74,7 @@ struct FTraitData : public FTableRowBase
 /**
  * @struct FUnitData
  * @brief Represents the data for a single unit, including its stats, traits, and abilities.
+ * @ingroup Data
  */
 USTRUCT(BlueprintType)
 struct FUnitData : public FTableRowBase
@@ -122,6 +126,7 @@ struct FUnitData : public FTableRowBase
 /**
  * @struct FItemData
  * @brief Represents the data for a single item, including its name, description, and the effect it provides.
+ * @ingroup Data
  */
 USTRUCT(BlueprintType)
 struct FItemData : public FTableRowBase

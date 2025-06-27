@@ -12,6 +12,7 @@ struct FUnitData;
 /**
  * @class UShopWidget
  * @brief Represents the shop UI, which displays a selection of units for the player to purchase.
+ * @ingroup UI
  */
 UCLASS()
 class AUTOBATTLER_API UShopWidget : public UUserWidget

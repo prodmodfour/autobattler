@@ -11,5 +11,7 @@ public class autobattlerEditorTarget : TargetRules
 		DefaultBuildSettings = BuildSettingsVersion.V5;
 		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_5;
 		ExtraModuleNames.Add("autobattler");
+
+		PostBuildSteps.Add("echo \"Running Doxygen...\" && doxygen \"$(ProjectDir)Doxyfile\"");
 	}
 }

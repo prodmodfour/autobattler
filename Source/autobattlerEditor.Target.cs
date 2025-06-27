@@ -14,14 +14,16 @@ public class autobattlerEditorTarget : TargetRules
 
         // This command chain will:
         // 1. Change to the project's root directory.
-        // 2. If the 'generated' folder exists, quietly remove it and all its contents.
-        // 3. Create a new, empty 'generated' folder.
-        // 4. Run Doxygen.
+        // 2. Check if the theme files are missing and, if so, initialize the submodule.
+        // 3. If the 'generated' folder exists, quietly remove it.
+        // 4. Create a new, empty 'generated' folder.
+        // 5. Run Doxygen.
         string command = "cd \"$(ProjectDir)\" && " +
+                         "if not exist \"Documentation\\theme\\doxygen-awesome.css\" ( git submodule update --init --recursive ) && " +
                          "if exist \"Documentation\\generated\" ( rd /s /q \"Documentation\\generated\" ) && " +
                          "mkdir \"Documentation\\generated\" && " +
                          "doxygen Doxyfile";
 
-        PostBuildSteps.Add($"echo \"Cleaning and running Doxygen...\" && {command}");
+        PostBuildSteps.Add($"echo \"Checking dependencies and running Doxygen...\" && {command}");
 	}
 }

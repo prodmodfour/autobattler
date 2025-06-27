@@ -17,8 +17,12 @@ public class autobattlerEditorTarget : TargetRules
         string EnginePath = "C:\\Program Files\\Epic Games\\UE_5.5";
 
         // --- Post-Build Steps ---
+         // STEP 1: Clean the previous documentation output to ensure a fresh start.
+        string CleanupCommand = "if exist \"$(ProjectDir)\\Documentation\\generated\" ( rd /s /q \"$(ProjectDir)\\Documentation\\generated\" )";
+        PostBuildSteps.Add($"echo \"[1/4] Cleaning old documentation...\" && {CleanupCommand}");
 
-        // 1. Export Data Tables to CSV
+
+        // STEP 2: Export Data Tables to CSV
         // We build the path to the commandlet runner and ensure all paths are correctly quoted.
         string UnrealEditorCmd = Path.Combine(EnginePath, "Engine", "Binaries", "Win64", "UnrealEditor-Cmd.exe");
         string UProjectPath = Path.Combine("$(ProjectDir)", "autobattler.uproject");
@@ -26,22 +30,15 @@ public class autobattlerEditorTarget : TargetRules
         string ExportCsvCommand = $"\"{UnrealEditorCmd}\" \"{UProjectPath}\" -run=ExportDataTablesToCSV";
         PostBuildSteps.Add($"echo \"Exporting data tables to CSV...\" && {ExportCsvCommand}");
 
-        // 2. Convert CSVs to Markdown
+        // STEP 3: Convert CSVs to Markdown
         string ConvertToMarkdownCommand = "python \"$(ProjectDir)\\csv_to_markdown.py\"";
         PostBuildSteps.Add($"echo \"Converting CSVs to Markdown...\" && {ConvertToMarkdownCommand}");
 
-        // 3. Run Doxygen
-            // This command chain will:
-            // 1. Change to the project's root directory.
-            // 2. Check if the theme files are missing and, if so, initialize the submodule.
-            // 3. If the 'generated' folder exists, quietly remove it.
-            // 4. Create a new, empty 'generated' folder.
-            // 5. Run Doxygen.
-        string DoxygenCommand = "cd \"$(ProjectDir)\" && " +
-                                "if not exist \"Documentation\\theme\\doxygen-awesome.css\" ( git submodule update --init --recursive ) && " +
-                                "if exist \"Documentation\\generated\" ( rd /s /q \"Documentation\\generated\" ) && " +
-                                "mkdir \"Documentation\\generated\" && " +
-                                "doxygen Doxyfile";
-        PostBuildSteps.Add($"echo \"Checking dependencies and running Doxygen...\" && {DoxygenCommand}");
+
+        // STEP 4: Run Doxygen by calling our dedicated batch script
+		string DoxygenCommand = "\"$(ProjectDir)\\run_doxygen.bat\"";
+		PostBuildSteps.Add($"echo \"Running Doxygen build script...\" && {DoxygenCommand}");
+
+  
 	}
 }

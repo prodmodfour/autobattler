@@ -11,7 +11,7 @@ REM ============================================================================
 
 echo.
 echo #################################
-echo #  AUTOBATTLER REBUILD SCRIPT   #
+echo #  AUTOBATTLER BUILD SCRIPT   #
 echo #################################
 echo.
 

@@ -33,14 +33,19 @@
 
 
 #################################
-# Other                         #
+# Commandlet generated files   #
 #################################
-# For personal use notes that are not needed to be tracked by git
-*.snote 
-
+/Content/DataTablesAsCSV
 
 #################################
 # Documentation                 #
 #################################
 # Doxygen
 /Documentation/generated/
+
+
+#################################
+# Other                         #
+#################################
+# For personal use notes that are not needed to be tracked by git
+*.snote 

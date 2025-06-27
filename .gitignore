@@ -37,3 +37,10 @@
 #################################
 # For personal use notes that are not needed to be tracked by git
 *.snote 
+
+
+#################################
+# Documentation                 #
+#################################
+# Doxygen
+/Documentation/generated/

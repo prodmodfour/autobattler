@@ -9,6 +9,10 @@ class UImage;
 class UTextBlock;
 class UButton;
 
+/**
+ * @class UShopItemWidget
+ * @brief Represents a single item in the shop UI.
+ */
 UCLASS()
 class AUTOBATTLER_API UShopItemWidget : public UUserWidget
 {
@@ -16,28 +20,38 @@ class AUTOBATTLER_API UShopItemWidget : public UUserWidget
 
 public:
 
+    /**
+     * @brief Sets up the widget with the provided unit data.
+     * @param UnitData The data of the unit to display.
+     */
     UFUNCTION(BlueprintCallable, Category = "Shop Item")
     void Setup(const FUnitData& UnitData);
 
 protected:
 
+    /** @brief The image for the unit's portrait. */
     UPROPERTY(meta = (BindWidget))
     UImage* Image_Portrait;
 
+    /** @brief The text for the unit's name. */
     UPROPERTY(meta = (BindWidget))
     UTextBlock* Text_UnitName;
 
+    /** @brief The text for the unit's cost. */
     UPROPERTY(meta = (BindWidget))
     UTextBlock* Text_Cost;
 
+    /** @brief The button to buy the unit. */
     UPROPERTY(meta = (BindWidget))
     UButton* Button_Buy;
 
 private:
-    // New function to handle the loaded texture
+    /**
+     * @brief Handles the loading of the portrait texture.
+     */
     void OnPortraitTextureLoaded();
     
-    // Store the soft pointer to load it
+    /** @brief A soft pointer to the portrait texture to be loaded. */
     TSoftObjectPtr<UTexture2D> PortraitTextureToLoad;
 
 

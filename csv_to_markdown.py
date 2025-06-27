@@ -57,7 +57,7 @@ def convert_csv_to_markdown():
                         f_md.write('| ' + ' | '.join(row) + ' |\n')
             print(f"  -> Converted '{filename}' to '{md_filename}'")
 
-        print("Markdown conversion complete. ✨")
+        print("Markdown conversion complete.")
 
     except Exception as e:
         print(f"An unexpected error occurred: {e}")

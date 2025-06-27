@@ -39,6 +39,12 @@ void UShopItemWidget::Setup(const FUnitData& UnitData)
 void UShopItemWidget::OnPortraitTextureLoaded()
 {
     UE_LOG(LogShopWidget, Log, TEXT("OnPortraitTextureLoaded called."));
+
+    if (!Image_Portrait)
+    {
+        UE_LOG(LogShopWidget, Error, TEXT("Image_Portrait widget is NULL! Check the variable name in C++ and the widget name in WBP_ShopItem."));
+        return;
+    }
     if (PortraitTextureToLoad.IsValid())
     {
         UE_LOG(LogShopWidget, Log, TEXT("Texture is valid, setting brush."));

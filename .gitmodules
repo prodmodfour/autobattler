@@ -1,0 +1,3 @@
+[submodule "Documentation/theme"]
+	path = Documentation/theme
+	url = https://github.com/jothepro/doxygen-awesome-css.git

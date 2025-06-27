@@ -32,4 +32,13 @@ protected:
 
     UPROPERTY(meta = (BindWidget))
     UButton* Button_Buy;
+
+private:
+    // New function to handle the loaded texture
+    void OnPortraitTextureLoaded();
+    
+    // Store the soft pointer to load it
+    TSoftObjectPtr<UTexture2D> PortraitTextureToLoad;
+
+
 };

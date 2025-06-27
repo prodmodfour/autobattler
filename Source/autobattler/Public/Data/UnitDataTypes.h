@@ -83,7 +83,7 @@ struct FUnitData : public FTableRowBase
 	TSubclassOf<UGameplayAbility> UnitAbility;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Unit Data")
-    TObjectPtr<UTexture2D> PortraitTexture = nullptr;
+    TSoftObjectPtr<UTexture2D> PortraitTexture = nullptr;
 };
 
 

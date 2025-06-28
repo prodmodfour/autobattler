@@ -2,6 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "UnitDataTypes.h" 
 #include "UnitCharacter.generated.h"
 
 /**
@@ -19,4 +20,32 @@ public:
      * @brief Default constructor.
      */
     AUnitCharacter();
+
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Config")
+    UDataTable* UnitDataTable;
+
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Config")
+    FName UnitID;
+
+    // Begin Stats pulled from Data Table
+    UPROPERTY(BlueprintReadOnly, Category = "Stats")
+    float MaxHealth;
+
+    UPROPERTY(BlueprintReadOnly, Category = "Stats")
+    float CurrentHealth;
+
+    UPROPERTY(BlueprintReadOnly, Category = "Stats")
+    float AttackDamage;
+
+    UPROPERTY(BlueprintReadOnly, Category = "Stats")
+    float AttackSpeed;
+    // End Stats
+
+
+protected:
+    virtual void BeginPlay() override;
+
+    FUnitData* UnitData;
+
+    void InitializeUnit();
 };

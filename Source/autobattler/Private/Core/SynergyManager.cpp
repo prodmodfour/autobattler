@@ -1,5 +1,5 @@
 #include "SynergyManager.h"
-#include "AUnitCharacter.h" 
+#include "Units/UnitCharacter.h" 
 
 void USynergyManager::Initialize(FSubsystemCollectionBase& Collection)
 {
@@ -23,7 +23,7 @@ void USynergyManager::UpdateSynergies(const TArray<AUnitCharacter*>& UnitsOnBoar
     //     }
     // }
 
-    // 2. Read the SynergyDataTable to see which buffs should be active. [cite: 70]
+    // 2. Read the SynergyDataTable to see which buffs should be active.
 
     // 3. Apply the buffs to the relevant units. 
 }

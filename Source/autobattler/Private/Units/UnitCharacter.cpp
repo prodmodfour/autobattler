@@ -27,10 +27,10 @@ void AUnitCharacter::InitializeUnit()
 
         if (UnitData)
         {
-            MaxHealth = UnitData->BaseHealth;
+            MaxHealth = UnitData->MaxHealth;
             CurrentHealth = MaxHealth;
-            AttackDamage = UnitData->BaseAttackDamage;
-            AttackSpeed = UnitData->BaseAttackSpeed;
+            AttackDamage = UnitData->AttackDamage;
+            AttackSpeed = UnitData->AttackSpeed;
 
         }
     }

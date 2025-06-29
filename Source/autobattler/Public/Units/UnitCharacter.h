@@ -2,7 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "UnitDataTypes.h" 
+#include "Data/UnitDataTypes.h" 
 #include "UnitCharacter.generated.h"
 
 /**

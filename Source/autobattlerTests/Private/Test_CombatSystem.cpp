@@ -2,7 +2,7 @@
 #include "Misc/AutomationTest.h"
 #include "Tests/AutomationEditorCommon.h"
 #include "Engine/World.h"
-#include "AUnitCharacter.h" 
+#include "Units/UnitCharacter.h" 
 #include "Engine/DataTable.h"
 
 

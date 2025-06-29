@@ -2,6 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "Subsystems/GameInstanceSubsystem.h"
+#include "Units/UnitCharacter.h"
 #include "SynergyManager.generated.h"
 
 enum class EUnitTrait : uint8;

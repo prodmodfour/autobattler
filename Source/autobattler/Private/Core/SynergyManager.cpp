@@ -1,4 +1,4 @@
-#include "SynergyManager.h"
+#include "Core/SynergyManager.h"
 #include "Units/UnitCharacter.h" 
 
 void USynergyManager::Initialize(FSubsystemCollectionBase& Collection)

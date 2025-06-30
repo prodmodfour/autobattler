@@ -14,6 +14,13 @@ public class autobattlerTests : ModuleRules
                 "Core", "CoreUObject", "Engine",
                 "autobattler"
             });
-
+        if (Target.bBuildEditor)
+        {
+            PrivateDependencyModuleNames.AddRange(
+                new string[]
+                {
+                    "UnrealEd"
+                });
+        }
     }
 }

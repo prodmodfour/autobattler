@@ -7,9 +7,8 @@
 #include "Engine/DataTable.h"
 #include "Data/UnitDataTypes.h"
 
-
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FCombatSystemTest, "Autobattler.Tests.Combat.UnitInitialization", 
-                                EAutomationTestFlags::ApplicationContextMask | EAutomationTestFlags::SmokeFilter);
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FCombatSystemTest, "Autobattler.Tests.Combat.UnitInitialization",
+                                 EAutomationTestFlags::EditorContext | EAutomationTestFlags::SmokeFilter);
 
 bool FCombatSystemTest::RunTest(const FString& Parameters)
 {
@@ -29,7 +28,8 @@ bool FCombatSystemTest::RunTest(const FString& Parameters)
     TestUnit->DispatchBeginPlay();
 
     FUnitData* TestWarriorData = UnitDataTable->FindRow<FUnitData>(FName("TestWarrior"), "");
-    TestEqual(TEXT("Unit's health should be initialized from DataTable"), TestUnit->CurrentHealth, static_cast<float>(TestWarriorData->MaxHealth));
+    TestEqual(TEXT("Unit's health should be initialized from DataTable"), TestUnit->CurrentHealth, 
+                                                                        static_cast<float>(TestWarriorData->MaxHealth));
 
     return true;
 }

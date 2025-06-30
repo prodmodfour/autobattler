@@ -1,3 +1,4 @@
+#if WITH_DEV_AUTOMATION_TESTS
 #include "CoreMinimal.h"
 #include "Misc/AutomationTest.h"
 #include "Tests/AutomationEditorCommon.h"
@@ -31,3 +32,4 @@ bool FCombatSystemTest::RunTest(const FString& Parameters)
 
     return true;
 }
+#endif

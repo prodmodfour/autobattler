@@ -27,7 +27,7 @@ bool FCombatSystemTest::RunTest(const FString& Parameters)
     TestUnit->DispatchBeginPlay();
 
     FUnitData* TestWarriorData = UnitDataTable->FindRow<FUnitData>(FName("TestWarrior"), "");
-    TestEqual(TEXT("Unit's health should be initialized from DataTable"), TestUnit->CurrentHealth, TestWarriorData->BaseHealth);
+    TestEqual(TEXT("Unit's health should be initialized from DataTable"), TestUnit->CurrentHealth, TestWarriorData->MaxHealth);
 
     return true;
 }

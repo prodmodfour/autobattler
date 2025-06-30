@@ -31,6 +31,8 @@ bool FCombatSystemTest::RunTest(const FString& Parameters)
     TestEqual(TEXT("Unit's health should be initialized from DataTable"), TestUnit->CurrentHealth, 
                                                                         static_cast<float>(TestWarriorData->MaxHealth));
 
+    TestUnit->Destroy();
+
     return true;
 }
 #endif

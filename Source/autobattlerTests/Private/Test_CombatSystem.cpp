@@ -7,7 +7,7 @@
 
 
 IMPLEMENT_SIMPLE_AUTOMATION_TEST(FCombatSystemTest, "Autobattler.Tests.Combat.UnitInitialization", 
-                                EAutomationTestFlags::ApplicationContextMask | EAutomationTestFlags::SmokeFilter)
+                                EAutomationTestFlags::ApplicationContextMask | EAutomationTestFlags::SmokeFilter);
 
 bool FCombatSystemTest::RunTest(const FString& Parameters)
 {

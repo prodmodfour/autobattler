@@ -5,6 +5,7 @@
 #include "Engine/World.h"
 #include "Units/UnitCharacter.h" 
 #include "Engine/DataTable.h"
+#include "Data/UnitDataTypes.h"
 
 
 IMPLEMENT_SIMPLE_AUTOMATION_TEST(FCombatSystemTest, "Autobattler.Tests.Combat.UnitInitialization", 

@@ -1,32 +1,48 @@
-# Methodology Documentation
-Negative space usage
-Testing methodology breakdown
+## Methodology Review
+#Figure out how we'll do testing going forward 
+
+## Set up
+#Gauntlet Tests
+#Github Actions CI
+
+## Learn
+#Markdown basics
+
+## Methodology Documentation
+#Testing methodology breakdown
     Unit tests
     functional tests
     mechanical tests
+#Actions
+#CI
 
-Solid Principles usage
+## Methodology Review
+#Negative space implementation
+
+## Methodology Documentation
+#Negative space usage
 
 
-# Set up
-Gauntlet Tests
-Github Actions CI
+## Methodology Review
+#Solid Principles implementation
 
-# Methodology Documentation
-Actions CI usage
+## Methodology Documentation
+#Solid Principles usage
 
-# Learn
-Markdown basics
 
-# Methodology Documentation
-Reformat Documentation
 
-# Learn
-Find doxygen examples
 
-# Code documentation
-Add self created docs to doxygen
-Update doxygen comments
-Reconfigure data tables
+
+
+## Methodology Documentation
+#Reformat Documentation
+
+## Learn
+#Find doxygen examples
+
+## Code documentation
+#Add self created docs to doxygen
+#Update doxygen comments
+#Reconfigure data tables
 
 

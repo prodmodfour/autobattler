@@ -1,4 +1,10 @@
-
+## Rasa
+# Learn about negative space programming
+# Refactor Hexgrid
+    Make it include negative space principles
+    apply solid principles
+# Create tests for Hexgrid
+    Apply new testing protocols
 
 
 ## Methodology Review

@@ -1,5 +1,12 @@
+
+
+
 ## Methodology Review
 #Figure out how we'll do testing going forward 
+#Negative space implementation
+#Solid Principles implementation
+
+
 
 ## Set up
 #Gauntlet Tests
@@ -15,26 +22,8 @@
     mechanical tests
 #Actions
 #CI
-
-## Methodology Review
-#Negative space implementation
-
-## Methodology Documentation
 #Negative space usage
-
-
-## Methodology Review
-#Solid Principles implementation
-
-## Methodology Documentation
 #Solid Principles usage
-
-
-
-
-
-
-## Methodology Documentation
 #Reformat Documentation
 
 ## Learn

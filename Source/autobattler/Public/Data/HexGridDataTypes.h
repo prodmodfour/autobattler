@@ -16,6 +16,12 @@ struct FHexTileData
 {
     GENERATED_BODY() 
 
+     /**
+     * @brief Constructor that takes coordinates.
+     * @param Coordinates The coordinates of the tile on the grid.
+     */
+    FHexTileData(FIntPoint Coordinates) : GridCoordinates(Coordinates), OccupyingUnit(nullptr), bIsPlayerOwned(false) {}
+
     /** @brief The coordinates of the tile on the grid. */
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Tile Data")
     FIntPoint GridCoordinates; 
@@ -34,9 +40,5 @@ struct FHexTileData
      */
     FHexTileData() : GridCoordinates(FIntPoint::ZeroValue), OccupyingUnit(nullptr), bIsPlayerOwned(false) {}
 
-    /**
-     * @brief Constructor that takes coordinates.
-     * @param Coordinates The coordinates of the tile on the grid.
-     */
-    FHexTileData(FIntPoint Coordinates) : GridCoordinates(Coordinates), OccupyingUnit(nullptr), bIsPlayerOwned(false) {}
+
 };
